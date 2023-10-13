@@ -7,7 +7,8 @@ export const Controls = () => {
         {
             id: 1,
             title: 'Card 1',
-            description: 'Lorem ipsum whatever comes here next.'
+            description: 'Lorem ipsum whatever comes here next.',
+            columns: 2,
         },
         {
             id: 2,
@@ -22,15 +23,17 @@ export const Controls = () => {
         {
             id: 4,
             title: 'Card 4',
-            description: 'Lorem ipsum whatever comes here next.'
+            description: 'Lorem ipsum whatever comes here next.',
+            rows: 2,
         },
         {
             id: 5,
             title: 'Card 5',
-            description: 'Lorem ipsum whatever comes here next.'
+            description: 'Lorem ipsum whatever comes here next.',
+            columns: 3,
         },
         {
-            id: 5,
+            id: 6,
             title: 'Card 5',
             description: 'Lorem ipsum whatever comes here next.'
         }
@@ -38,7 +41,7 @@ export const Controls = () => {
 
     return (
         <div className='grid'>
-            {cards.map((card) => <Card title={card.title} description={card.description} />)}
+            {cards.map((card) => <Card title={card.title} description={card.description} columns={card.columns} rows={card.rows} />)}
         </div>
     )
 }
