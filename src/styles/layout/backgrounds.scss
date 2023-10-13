@@ -1,14 +1,14 @@
 .background {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100vh;
     width: 100vw;
     background-image: url('../../assets/visuals/halloween_dark.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center bottom;
-}
-
-.background-fade {
+    background-position: center top;
+    z-index: -1;
     &::after {
         position: absolute;
         content: "";

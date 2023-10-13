@@ -4,12 +4,10 @@ export const AsideNav = () => {
     return (
         <div className='nav'>
             <ul className='list'>
-                <li>Item 1</li>
-                <li>Item 1</li>
-                <li>Item 1</li>
-                <li>Item 1</li>
-                <li>Item 1</li>
-                <li>Item 1</li>
+                <li>All</li>
+                <li>Multimedia</li>
+                <li>Lights</li>
+                <li>Cameras</li>
             </ul>
         </div>
     )

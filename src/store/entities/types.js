@@ -1,0 +1,4 @@
+export const SET_ENTITIES = 'SET_ENTITIES';
+export const CLEAR_ENTITIES = 'CLEAR_ENTITIES';
+export const SET_DOOR_ENTITIES = 'SET_DOOR_ENTITIES';
+export const SET_LOADING = 'SET_LOADING';

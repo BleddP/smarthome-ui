@@ -1,0 +1,15 @@
+.car-panel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    .entities-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+}
+
+.car-visual {
+    filter: brightness(60%) contrast(120%);
+}
