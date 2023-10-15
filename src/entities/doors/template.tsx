@@ -10,8 +10,8 @@ interface Props {
 export const DoorTemplate: React.FC<Props> = ({name, state}) => {
 
     const icon = useMemo(() => {
-       if (state === 'open') return ICONS.UNLOCKED
-       if (state === 'closed') return ICONS.LOCKED
+       if (state === 'on') return ICONS.UNLOCKED
+       if (state === 'off') return ICONS.LOCKED
        if (state === 'unknown') return ICONS.UNKNOWN
        if (state === 'unavailable') return ICONS.UNAVAILABLE
        return ICONS.LOCKED

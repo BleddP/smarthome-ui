@@ -1,22 +1,36 @@
 .nav {
-    width: 248px;
-    height: 100vh;
-    padding-inline: 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-right: 1px solid;
-    border-color: rgba(255, 255, 255, 0.1);
-    background-color: rgba(0, 0, 0, 0.1);
+  width: 248px;
+  height: 100vh;
+  padding-inline: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid;
+  border-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .list {
-    list-style-type: none;
-    padding-left: 0;
-    
-    li {
-        padding-block: 12px;
-        font-size: 36px;
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    padding-block: 12px;
+    font-size: 36px;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: orange;
+      }
     }
+
+    &.active {
+      a {
+        color: orange;
+      }
+    }
+  }
 }

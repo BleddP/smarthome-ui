@@ -7,7 +7,7 @@ export const DoorsPanel = () => {
     const { entities } = useStore()
     const { FRIDGE, GARAGE } = ENTITY_KEYS.DOORS
 
-    const parseEntity = (entity) => {
+    const parseEntity = (entity: any) => {
         if (!entity) return null
         return {
             id: entity.entity_id,

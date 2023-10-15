@@ -1,3 +1,6 @@
 export * from './doors'
 export * from './car'
 export * from './calendar'
+export * from './weather'
+export * from './homepod/Homepod'
+export * from './lights'
