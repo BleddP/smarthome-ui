@@ -30,7 +30,7 @@ export const AsideNav = () => {
 
   const paths = useMemo(() => {
     return ROUTES.map(r => ({ ...r, active: r.path === location.pathname }))
-  }, [ROUTES, location.pathname])
+  }, [location.pathname])
 
   return (
     <div className="nav">
