@@ -9,7 +9,7 @@ export const websocketLongLife = async () => {
   try {
     const auth = createLongLivedTokenAuth(
       'http://homeassistant.local:8123',
-      process.env.REACT_APP_LONG_KEY || ''
+      process.env.REACT_APP_LONG_KEY
     )
 
     const connection = await createConnection({ auth })

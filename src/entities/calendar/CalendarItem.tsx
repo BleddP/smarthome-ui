@@ -1,31 +1,36 @@
+import type { Event } from './index'
+import { parseDateTime } from 'utils/helpers/parse-date-time'
 import './calendar-panel.styles.scss'
 
 interface Props {
-    item: {
-        title: string,
-        description?: string,
-        day: string,
-        date: number,
-        month: string,
-        start: string,
-        end: string
-    }
+  event: Event
 }
 
-export const CalendarItem: React.FC<Props> = ({ item }) => {
-    const { title, description, day, date, month, start, end } = item
-    return (
-        <div className="calendar-item">
-            <div className='calendar-dates'>
-                <span className='calendar-dates__day'>{day}</span>
-                <span className='calendar-dates__date'>{date}</span>
-                <span className='calendar-dates__month'>{month}</span>
-            </div>
-            <div className='calendar-content'>
-                <h4>{title}</h4>
-                {description && <span>{description}</span>}
-                <span>{start} until {end}</span>
-            </div>
-        </div>
-    )
+export const CalendarItem = ({ event }: Props) => {
+  const startEvent = new Date(event.start.dateTime)
+  const endEvent = new Date(event.end.dateTime)
+
+  const start = parseDateTime(startEvent)
+  const end = parseDateTime(endEvent)
+
+  console.log(event)
+
+  if (start?.day === 'Invalid Date') return null
+
+  return (
+    <div className="calendar-item">
+      <div className="calendar-dates">
+        <span className="calendar-dates__day">{start?.day}</span>
+        <span className="calendar-dates__date">{start?.date}</span>
+        <span className="calendar-dates__month">{start?.month}</span>
+      </div>
+      <div className="calendar-content">
+        <small>
+          {start?.hours}:{start?.minutes}
+        </small>
+        <h4>{event.summary}</h4>
+        <small>{event.location}</small>
+      </div>
+    </div>
+  )
 }
